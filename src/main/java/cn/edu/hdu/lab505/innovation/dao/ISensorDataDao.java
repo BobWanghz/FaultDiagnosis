@@ -23,4 +23,6 @@ public interface ISensorDataDao extends ICurdDaoSupport<SensorData> {
     void batchInsert(String entityName, List<SensorData> list);
 
     Page<SensorData> findSensorDataLeDate(String entityName, Date date, int start, int limit);
+    
+    List<SensorData> findByProductIdAndDate(Date date, int productId);
 }

@@ -75,6 +75,8 @@ public class ErrorDeviceDao extends AbstractHibernateCurdDaoSupport<ErrorDevice>
 		}
 				
 	}
+	
+	
 
 
 }

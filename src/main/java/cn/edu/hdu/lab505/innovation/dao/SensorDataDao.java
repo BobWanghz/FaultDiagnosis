@@ -3,7 +3,10 @@ package cn.edu.hdu.lab505.innovation.dao;
 import cn.edu.hdu.lab505.innovation.common.AbstractHibernateCurdDaoSupport;
 import cn.edu.hdu.lab505.innovation.common.Page;
 import cn.edu.hdu.lab505.innovation.domain.DataBean;
+import cn.edu.hdu.lab505.innovation.domain.ErrorDevice;
 import cn.edu.hdu.lab505.innovation.domain.SensorData;
+import cn.edu.hdu.lab505.innovation.util.DateUtill;
+
 import org.apache.log4j.Logger;
 import org.hibernate.HibernateException;
 import org.hibernate.SQLQuery;
@@ -191,4 +194,24 @@ public class SensorDataDao extends AbstractHibernateCurdDaoSupport<SensorData> i
         detachedCriteria.add(Restrictions.le("date", date));
         return findPage(detachedCriteria, start, limit);
     }
+
+	@Override
+	public List<SensorData> findByProductIdAndDate(Date date, int productId) {
+		//List<SensorDataBean> list = new ArrayList<SensorDataBean>();
+		List<SensorData> list = new ArrayList<>();
+		getHibernateTemplate().executeWithNativeSession(new HibernateCallback<Boolean>() {
+            @Override
+            public Boolean doInHibernate(Session session) throws HibernateException {
+            	
+                String sql = "SELECT * FROM t_sensordata WHERE date >= ? AND product_id = ? ORDER BY date ASC";
+                SQLQuery query = session.createSQLQuery(sql);
+                query.setTimestamp(0, date);
+                query.setInteger(1, productId);
+                list.addAll(query.addEntity(ACTIVE_ENTITY).list());                 
+                return true;
+            }
+		});
+		return list;
+	}
+	
 }
