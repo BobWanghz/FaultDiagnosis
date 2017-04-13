@@ -1,5 +1,9 @@
 package cn.edu.hdu.lab505.innovation.domain;
-
+/**
+ * 
+ * @author cs
+ * @date 2017年4月13日
+ */
 public class DeviceStatusBean {
 
 	private int productId;					//产品ID

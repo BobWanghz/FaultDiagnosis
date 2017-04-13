@@ -11,7 +11,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * 
+ * @author cs
+ * @date 2017年4月13日
+ */
 @Entity
 public class ErrorDevice {
 	
@@ -64,11 +68,11 @@ public class ErrorDevice {
 	public void setOverTime(Date overTime) {
 		this.overTime = overTime;
 	}
-	public int getFaultTybe() {
+	public int getFaultType() {
 		return faultType;
 	}
-	public void setFaultTybe(int faultTybe) {
-		this.faultType = faultTybe;
+	public void setFaultType(int faultType) {
+		this.faultType = faultType;
 	}
 	public String getUpdateMan() {
 		return updateMan;

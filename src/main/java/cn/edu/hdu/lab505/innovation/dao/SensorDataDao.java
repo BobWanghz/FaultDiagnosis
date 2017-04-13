@@ -195,9 +195,16 @@ public class SensorDataDao extends AbstractHibernateCurdDaoSupport<SensorData> i
         return findPage(detachedCriteria, start, limit);
     }
 
+    /**
+     * 
+     * @author cs
+     * @date 2017年4月13日  
+     * @param date
+     * @param productId
+     * @return
+     */
 	@Override
 	public List<SensorData> findByProductIdAndDate(Date date, int productId) {
-		//List<SensorDataBean> list = new ArrayList<SensorDataBean>();
 		List<SensorData> list = new ArrayList<>();
 		getHibernateTemplate().executeWithNativeSession(new HibernateCallback<Boolean>() {
             @Override
