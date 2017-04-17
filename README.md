@@ -1,13 +1,13 @@
 # Lng-Device
 ## v1.1 
-* ĞŞ¸ÄdataToString ¸ñÊ½×ª»»
-* senseorDaoÌí¼Ó findByProductIdAndDate½Ó¿Ú¡£¸ù¾İÊ±¼ä£¬²úÆ·id²éÑ¯sensorData
+* ä¿®æ”¹dataToString æ ¼å¼è½¬æ¢
+* senseorDaoæ·»åŠ  findByProductIdAndDateæ¥å£ã€‚æ ¹æ®æ—¶é—´ï¼Œäº§å“idæŸ¥è¯¢sensorData
 ## v1.2
-* ĞŞ¸Äjson·µ»Ø¡°faultType¡±£¬ÏÔÊ¾¡°faultTybe¡±µÄ´íÎó
+* ä¿®æ”¹jsonè¿”å›â€œfaultTypeâ€ï¼Œæ˜¾ç¤ºâ€œfaultTybeâ€çš„é”™è¯¯
 ## v1.3
-* ErrorDeviceDao Ìí¼Ó getPreChangedErrorDevice()£¬»ñÈ¡±»¸ü¸Ä¹ıµÄErrorDeviceµÄlist£¬¼´ÆäÖĞµÄupdateMan×Ö¶Î²»¿ÕµÄÊı¾İ
-* ĞŞ¸Ä²âÊÔ°´ÈÕÆÚ»ñÈ¡sensorDataµÄµ¥Ôª²âÊÔ 
-'Calendar ca = Calendar.getInstance();
-   ca.set(2016, 11, 4);'  ÉèÖÃÔÂ·İÊ±£¬¼õ1£¬ÔÂ·İ´Ó0¿ªÊ¼
-* ĞŞ¸ÄsqlÎÄ¼ş  ErrorDevice ±í
-* ĞŞ¸Ä rechargeTime;//×î½üÒ»´Î³äÖµÊ±¼ä ×Ö¶ÎÀàĞÍ
+* ErrorDeviceDao æ·»åŠ  getPreChangedErrorDevice()ï¼Œè·å–è¢«æ›´æ”¹è¿‡çš„ErrorDeviceçš„listï¼Œå³å…¶ä¸­çš„updateManå­—æ®µä¸ç©ºçš„æ•°æ®
+* ä¿®æ”¹æµ‹è¯•æŒ‰æ—¥æœŸè·å–sensorDataçš„å•å…ƒæµ‹è¯• 
+    Calendar ca = Calendar.getInstance();
+    ca.set(2016, 11, 4);  è®¾ç½®æœˆä»½æ—¶ï¼Œå‡1ï¼Œæœˆä»½ä»0å¼€å§‹
+* ä¿®æ”¹sqlæ–‡ä»¶  ErrorDevice è¡¨
+* ä¿®æ”¹ rechargeTime;//æœ€è¿‘ä¸€æ¬¡å……å€¼æ—¶é—´ å­—æ®µç±»å‹
