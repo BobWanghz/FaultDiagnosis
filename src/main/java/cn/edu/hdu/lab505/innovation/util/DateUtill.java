@@ -16,7 +16,7 @@ public class DateUtill {
 		return sdf.format(date);
 	}
 	
-	public static String dateToString( Date date){
+	public static String dateToString(Date date){
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 		
 		return sdf.format(date);

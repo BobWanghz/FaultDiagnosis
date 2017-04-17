@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50717
 File Encoding         : 65001
 
-Date: 2017-04-12 20:29:13
+Date: 2017-04-17 12:45:44
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -74,44 +74,44 @@ CREATE TABLE `errordevice` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `beginTime` datetime DEFAULT NULL,
   `dataId` int(11) NOT NULL,
-  `faultType` int(11) NOT NULL,
+  `faultType` int(11) DEFAULT NULL,
   `overTime` datetime DEFAULT NULL,
   `updateMan` varchar(255) DEFAULT NULL,
   `updateTime` datetime DEFAULT NULL,
   `productId` int(11) DEFAULT NULL,
-  `faultTybe` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `FK_9oc4jvwjobno4ev7ltk4aabww` (`productId`),
   CONSTRAINT `FK_9oc4jvwjobno4ev7ltk4aabww` FOREIGN KEY (`productId`) REFERENCES `t_product` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of errordevice
 -- ----------------------------
-INSERT INTO `errordevice` VALUES ('1', '2017-03-06 19:39:26', '1', '1', '2017-04-06 19:39:26', 'xiaoWang', '2017-04-12 13:52:43', '1', '0');
-INSERT INTO `errordevice` VALUES ('2', '2017-03-06 19:39:26', '2', '1', '2017-04-06 19:39:26', 'xll', '2017-04-12 19:15:48', '1', '0');
-INSERT INTO `errordevice` VALUES ('3', '2017-03-06 19:39:26', '3', '1', '2017-04-06 19:39:26', null, null, '1', '0');
-INSERT INTO `errordevice` VALUES ('4', '2017-04-06 19:39:26', '4', '1', '2017-04-06 19:39:26', null, null, '1', '0');
-INSERT INTO `errordevice` VALUES ('5', '2017-04-06 19:39:26', '5', '1', '2017-04-06 19:39:26', null, null, '1', '0');
-INSERT INTO `errordevice` VALUES ('6', '2017-04-06 19:39:26', '6', '1', '2017-04-06 19:39:26', null, null, '1', '0');
-INSERT INTO `errordevice` VALUES ('8', '2017-04-06 19:39:26', '8', '1', '2017-04-06 19:39:26', null, null, '1', '0');
-INSERT INTO `errordevice` VALUES ('9', '2017-04-06 19:39:26', '9', '1', '2017-04-06 19:39:26', null, null, '1', '0');
-INSERT INTO `errordevice` VALUES ('10', '2017-04-06 19:39:26', '10', '1', '2017-04-06 19:39:26', null, null, '1', '0');
-INSERT INTO `errordevice` VALUES ('11', '2017-04-06 19:39:26', '1', '1', '2017-04-06 19:39:26', null, null, '2', '0');
-INSERT INTO `errordevice` VALUES ('12', '2017-04-06 19:39:26', '2', '1', '2017-04-06 19:39:26', null, null, '2', '0');
-INSERT INTO `errordevice` VALUES ('13', '2017-04-06 19:39:26', '3', '1', '2017-04-06 19:39:26', null, null, '2', '0');
-INSERT INTO `errordevice` VALUES ('14', '2017-04-06 19:39:26', '4', '1', '2017-04-06 19:39:26', 'cs', null, '2', '0');
-INSERT INTO `errordevice` VALUES ('15', '2017-04-06 19:39:26', '5', '1', '2017-04-06 19:39:26', 'cs', null, '2', '0');
-INSERT INTO `errordevice` VALUES ('16', '2017-04-06 19:39:26', '6', '1', '2017-04-06 19:39:26', 'cs', null, '2', '0');
-INSERT INTO `errordevice` VALUES ('17', '2017-04-06 19:39:26', '7', '1', '2017-04-06 19:39:26', 'cs', null, '2', '0');
-INSERT INTO `errordevice` VALUES ('18', '2017-04-06 19:39:26', '8', '1', '2017-04-06 19:39:26', 'cs', null, '2', '0');
-INSERT INTO `errordevice` VALUES ('19', '2017-04-06 19:39:26', '9', '1', '2017-04-06 19:39:26', 'cs', null, '2', '0');
-INSERT INTO `errordevice` VALUES ('20', '2017-04-06 19:39:26', '10', '1', '2017-04-06 19:39:26', 'cs', null, '1', '0');
-INSERT INTO `errordevice` VALUES ('21', '2017-04-12 11:41:16', '1', '0', null, null, null, '1', '0');
-INSERT INTO `errordevice` VALUES ('22', '2017-04-12 11:42:30', '2', '0', null, null, null, '1', '0');
-INSERT INTO `errordevice` VALUES ('23', '2017-04-12 11:47:55', '3', '0', null, null, null, '1', '0');
-INSERT INTO `errordevice` VALUES ('24', '2017-04-12 11:51:07', '4', '0', null, null, null, '1', '0');
-INSERT INTO `errordevice` VALUES ('25', '2017-04-12 12:03:13', '1', '0', null, null, null, '1', '0');
+INSERT INTO `errordevice` VALUES ('1', '2017-03-06 19:39:26', '1', '1', '2017-04-06 19:39:26', 'xiaoWang', '2017-04-12 13:52:43', '1');
+INSERT INTO `errordevice` VALUES ('2', '2017-03-06 19:39:26', '2', '1', '2017-04-06 19:39:26', 'xll', '2017-04-12 19:15:48', '1');
+INSERT INTO `errordevice` VALUES ('3', '2017-03-06 19:39:26', '3', '1', '2017-04-06 19:39:26', 'ddddd', '2017-04-13 13:59:35', '1');
+INSERT INTO `errordevice` VALUES ('4', '2017-04-06 19:39:26', '4', '1', '2017-04-06 19:39:26', null, null, '1');
+INSERT INTO `errordevice` VALUES ('5', '2017-04-06 19:39:26', '5', '1', '2017-04-06 19:39:26', null, null, '1');
+INSERT INTO `errordevice` VALUES ('6', '2017-04-06 19:39:26', '6', '1', '2017-04-06 19:39:26', null, null, '1');
+INSERT INTO `errordevice` VALUES ('8', '2017-04-06 19:39:26', '8', '1', '2017-04-06 19:39:26', null, null, '1');
+INSERT INTO `errordevice` VALUES ('9', '2017-04-06 19:39:26', '9', '1', '2017-04-06 19:39:26', null, null, '1');
+INSERT INTO `errordevice` VALUES ('10', '2017-04-06 19:39:26', '10', '1', '2017-04-06 19:39:26', null, null, '1');
+INSERT INTO `errordevice` VALUES ('11', '2017-04-06 19:39:26', '1', '1', '2017-04-06 19:39:26', null, null, '2');
+INSERT INTO `errordevice` VALUES ('12', '2017-04-06 19:39:26', '2', '1', '2017-04-06 19:39:26', null, null, '2');
+INSERT INTO `errordevice` VALUES ('13', '2017-04-06 19:39:26', '3', '1', '2017-04-06 19:39:26', null, null, '2');
+INSERT INTO `errordevice` VALUES ('14', '2017-04-06 19:39:26', '4', '1', '2017-04-06 19:39:26', 'cs', null, '2');
+INSERT INTO `errordevice` VALUES ('15', '2017-04-06 19:39:26', '5', '1', '2017-04-06 19:39:26', 'cs', null, '2');
+INSERT INTO `errordevice` VALUES ('16', '2017-04-06 19:39:26', '6', '1', '2017-04-06 19:39:26', 'cs', null, '2');
+INSERT INTO `errordevice` VALUES ('17', '2017-04-06 19:39:26', '7', '1', '2017-04-06 19:39:26', 'cs', null, '2');
+INSERT INTO `errordevice` VALUES ('18', '2017-04-06 19:39:26', '8', '1', '2017-04-06 19:39:26', 'cs', null, '2');
+INSERT INTO `errordevice` VALUES ('19', '2017-04-06 19:39:26', '9', '1', '2017-04-06 19:39:26', 'cs', null, '2');
+INSERT INTO `errordevice` VALUES ('20', '2017-04-06 19:39:26', '10', '1', '2017-04-06 19:39:26', null, null, '1');
+INSERT INTO `errordevice` VALUES ('21', '2017-04-12 11:41:16', '1', '0', null, null, null, '1');
+INSERT INTO `errordevice` VALUES ('22', '2017-04-12 11:42:30', '2', '0', null, null, null, '1');
+INSERT INTO `errordevice` VALUES ('23', '2017-04-12 11:47:55', '3', '0', null, null, null, '1');
+INSERT INTO `errordevice` VALUES ('24', '2017-04-12 11:51:07', '4', '0', null, null, null, '1');
+INSERT INTO `errordevice` VALUES ('25', '2017-04-12 12:03:13', '1', '0', null, null, null, '1');
+INSERT INTO `errordevice` VALUES ('26', '2017-04-17 10:33:42', '1', '0', null, null, null, '1');
 
 -- ----------------------------
 -- Table structure for `t_account`

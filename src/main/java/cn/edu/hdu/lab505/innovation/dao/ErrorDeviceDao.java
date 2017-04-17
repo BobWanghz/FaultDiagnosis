@@ -50,7 +50,19 @@ public class ErrorDeviceDao extends AbstractHibernateCurdDaoSupport<ErrorDevice>
 	       
 	            return list;
 	}
-
+	/**
+	 * 获取被更改过的ErrorDevice的list，即其中的updateMan字段不空的数据
+	 * @author WHZ
+	 * @return ErrorDevice组成的list
+	 * */
+	@Override
+	public List<ErrorDevice> getPreChangedErrorDevice(){
+		String hql="from ErrorDevice e WHERE e.beginTime >= '" + DateUtill.getPreDay() + "' AND e.updateMan is not null";
+        List<ErrorDevice> list = (List<ErrorDevice>)getHibernateTemplate().find(hql);
+       
+            return list;
+        
+	}
 	public void insert(ErrorDevice entity) {
 		getHibernateTemplate().save(entity);
 		

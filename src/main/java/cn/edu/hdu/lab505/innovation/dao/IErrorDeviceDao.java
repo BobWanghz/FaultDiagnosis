@@ -20,5 +20,6 @@ public interface IErrorDeviceDao {
 	
 	public List<Data2Device> getDeviceInfo(); 						//获取data2device表，缓存到table中。避免重复查询数据库
 	public void insert(ErrorDevice entity);
+	public List<ErrorDevice> getPreChangedErrorDevice();
 
 }

@@ -32,7 +32,7 @@ public class SensorData implements Serializable {
     private Float temperature1;//温度1
     private Float pressure;//压力
     private Float surplusFlow;//剩余流量
-    private Float rechargeTime;//最近一次充值时间
+    private String rechargeTime;//最近一次充值时间
     private String fireDetector;//火焰探测
     private String combustibleGasDetector;//可燃气体探测
     private Float longitude;//GPS的经度
@@ -216,11 +216,11 @@ public class SensorData implements Serializable {
         this.surplusFlow = surplusFlow;
     }
 
-    public Float getRechargeTime() {
+    public String getRechargeTime() {
         return rechargeTime;
     }
 
-    public void setRechargeTime(Float rechargeTime) {
+    public void setRechargeTime(String rechargeTime) {
         this.rechargeTime = rechargeTime;
     }
 
