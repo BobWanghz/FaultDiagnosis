@@ -6,8 +6,10 @@
 * 修改json返回“faultType”，显示“faultTybe”的错误
 ## v1.3
 * ErrorDeviceDao 添加 getPreChangedErrorDevice()，获取被更改过的ErrorDevice的list，即其中的updateMan字段不空的数据
-* 修改测试按日期获取sensorData的单元测试 
+* 修改测试按日期获取sensorData的单元测试  
+
   `Calendar ca = Calendar.getInstance();  
+  
   ca.set(2016, 11, 4);`
   > 设置月份时，减1，月份从0开始
 * 修改sql文件  ErrorDevice 表
